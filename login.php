@@ -1,0 +1,102 @@
+<?php 
+
+$username = $password = "";
+$usernameErr = $passwordErr = "";
+
+include("functions.php");
+include("userConfig.php");
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	if (empty($_POST["name"])) {
+		$usernameErr = "Username is required";
+	  } else {
+		$username = test_input($_POST["username"]);
+		
+	  }
+
+
+	if (empty($_POST["password"])) {
+		$passwordErr = "Password is required";
+	  } else {
+		$password = test_input($_POST["password"]);
+
+	  }
+
+
+	
+  }
+
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>TJ net</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body style="background-image: url(images/backg.jpg);">
+	<section class="ftco-section">
+		<div class="container">
+			
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-lg-4">
+				<div class="login-wrap py-5">
+					<div class="img d-flex align-items-center justify-content-center" style="background-image: url(images/bg.png);"></div>
+					<h3 class="text-center mb-0">Welcome</h3>
+					<p class="text-center">Sign in by entering your credentials below</p>
+					<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" class="login-form">
+						<div class="form-group">
+							<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-user"></span></div>
+							<input type="text" class="form-control" placeholder="Username" name="username" value="<?php echo $username;?>">
+							<span class="error">* <?php echo $usernameErr;?></span>
+						</div>
+						<div class="form-group">
+							<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-lock"></span></div>
+						<input type="password" class="form-control" name="password" placeholder="Password" value="<?php echo $password;?>">
+						<span class="error">* <?php echo $passwordErr;?></span>
+						</div>
+						<div class="form-group d-flex align-items-center justify-content-center" >
+										
+							<a href="findAccount.php" style="color:green" >Forgot Password</a>
+										
+						</div>
+						<div class="form-group">
+							<button type="submit" style="background-color:green" class="btn form-control  rounded submit px-3">Get Started</button>
+						</div>
+					</form>
+					<div class="w-100 text-center mt-4 text">
+						<p class="mb-0">Don't have an account?</p>
+						<a href="register.php" style="color:green" >Sign Up</a>
+					</div>
+	        	
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+
+	</body>
+</html>

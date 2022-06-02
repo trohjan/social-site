@@ -1,0 +1,127 @@
+
+
+  
+
+  
+  .form_wrap .input_wrap label{
+    margin-bottom: 3px;
+    color: #1fe471;
+    display: block;
+  }
+  
+  .form_wrap .input_grp{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .form_wrap .input_grp  input[type="text"]{
+    width: 165px;
+    
+  }
+
+  .form_wrap  input[type="text"]{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border-radius: 3px;
+    border: 1.3px solid #9597a6;
+  }
+  .form_wrap  input[type="number"]{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border-radius: 3px;
+    border: 1.3px solid #9597a6;
+  }
+  
+  .form_wrap  input[type="text"]:focus{
+    border-color: #063abd;
+  }
+  
+  .form_wrap ul{
+    padding: 16px 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    border:1px solid rgb(115, 185, 235);
+    width:70%;
+    
+    margin-left: 15%;
+  }
+  
+  .form_wrap ul li:first-child{
+    margin-right: 60px;
+  }
+  
+  .form_wrap ul .radio_wrap{
+    position: relative;
+    margin-bottom: 0;
+  }
+  
+  .form_wrap ul .radio_wrap .input_radio{
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+  }
+  
+  .form_wrap ul .radio_wrap span{
+    display: inline-block;
+    font-size: 17px;
+    padding: 3px 15px;
+    border-radius: 15px;
+    color: #0cb90c;
+  }
+  
+  .form_wrap .input_radio:checked ~ span{
+    background: #105ce2;
+    color:white;
+  }
+  
+  /* Submit Button */
+  .form_wrap .submit_btn{
+    font-size:17px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    width: 100%;
+    
+    padding: 10px;
+    border: 0;
+    color:white;
+  }
+  
+  /* Button Hover effect */
+  .form_wrap .submit_btn:hover{
+    background: #051c94;
+  }
+
+  #imageUpload
+{
+    display: none;
+}
+
+#profileImage
+{
+    cursor: pointer;
+}
+
+#profile-container {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+
+#profile-container img {
+    width: 150px;
+    height: 150px;
+}
+.error{
+  color:red;
+}
